@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alekya AI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <a href="#" class="nav-item">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="ph ph-desktop"></i>
+                    <span>Computer</span>
+                </a>
+                
+                <div class="nav-section">
+                    <a href="#" class="nav-item new-thread">
+                        <i class="ph ph-plus"></i>
+                        <span>New thread</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-clock-counter-clockwise"></i>
+                        <span>History</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-compass"></i>
+                        <span>Discover</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-squares-four"></i>
+                        <span>Spaces</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-chart-line-up"></i>
+                        <span>Finance</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                        <span>Explore</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="history-list">
+                    <a href="#" class="history-item">students possess v...</a>
+                    <a href="#" class="history-item">ld you please help m...</a>
+                    <a href="#" class="history-item">can I made a website...</a>
+                    <a href="#" class="history-item">sk to give self intro...</a>
+                </div>
+                
+                <a href="#" class="nav-item upgrade-plan">
+                    <i class="ph ph-arrow-circle-up"></i>
+                    <span>Upgrade plan</span>
+                    <div class="notification-dot"></div>
+                </a>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <div class="avatar">AK</div>
+                        <span>alekya Karri</span>
+                    </div>
+                    <i class="ph ph-bell"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="promo-banner">
+                    <span class="badge">New</span>
+                    <span>Computer is now available on Pro</span>
+                    <a href="#" class="upgrade-link">Upgrade &rarr;</a>
+                </div>
+                <div class="top-actions">
+                    <button class="header-btn">
+                        <i class="ph ph-calendar-blank"></i> Scheduled <i class="ph ph-caret-down"></i>
+                    </button>
+                    <button class="header-btn icon-only">
+                        <i class="ph ph-printer"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="logo-container">
+                    <h1 class="logo">Alekya</h1>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-box" id="search-form">
+                        <textarea id="search-input" placeholder="Type / for search modes and shortcuts"></textarea>
+                        <div class="search-controls">
+                            <div class="controls-left">
+                                <button class="icon-button" id="upload-btn" title="Upload PDF"><i class="ph ph-plus"></i></button>
+                                <input type="file" id="file-input" accept=".pdf" style="display: none;">
+                                <span id="file-name-display" style="font-size: 0.8rem; color: #555; max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+                                <button class="pill-button active">
+                                    <i class="ph ph-desktop"></i>
+                                    Computer
+                                    <i class="ph ph-plus" style="font-size: 10px; margin-left: 4px;"></i>
+                                </button>
+                            </div>
+                            <div class="controls-right">
+                                <button class="text-button">Model <i class="ph ph-caret-down"></i></button>
+                                <button class="icon-button"><i class="ph ph-microphone"></i></button>
+                                <button class="voice-search-btn">
+                                    <i class="ph-fill ph-waveform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions-container">
+                    <div class="suggestions-header">
+                        <i class="ph ph-desktop"></i>
+                        <span>Try Computer</span>
+                    </div>
+                    <div class="suggestion-chips">
+                        <button class="chip"><i class="ph ph-list-dashes"></i> Organize my life</button>
+                        <button class="chip"><i class="ph ph-code"></i> Create a prototype</button>
+                        <button class="chip"><i class="ph ph-eye"></i> Monitor the situation</button>
+                        <button class="chip"><i class="ph ph-briefcase"></i> Build a b...</button>
+                    </div>
+                    <div class="suggestion-list">
+                        <a href="#" class="suggestion-list-item">Prepare me for an upcoming meeting</a>
+                        <a href="#" class="suggestion-list-item">Build a personal CRM to track my network</a>
+                        <a href="#" class="suggestion-list-item">Sort my tasks and prioritize this week</a>
+                    </div>
+                </div>
+
+                <div id="response-container" class="suggestions-container" style="display: none; margin-top: 1rem;">
+                    <div id="loading-indicators" style="display: none; gap: 8px; align-items: center; color: #555;">
+                        <i class="ph ph-spinner" style="animation: spin 1s linear infinite;"></i> Generating...
+                    </div>
+                    <div id="response-text" style="line-height: 1.6; color: #333;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
